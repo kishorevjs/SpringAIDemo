@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin("*")
 public class OpenAIController {
 
-    private ChatClient chatClient;
+    private final ChatClient chatClient;
 
     public OpenAIController(OpenAiChatModel chatModel) {
         this.chatClient = ChatClient.create(chatModel);

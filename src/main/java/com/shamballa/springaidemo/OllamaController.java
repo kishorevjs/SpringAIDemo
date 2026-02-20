@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin("*")
 public class OllamaController {
 
-    private ChatClient chatClient;
+    private final ChatClient chatClient;
 
     public OllamaController(OllamaChatModel ollamaChatModel) {
         this.chatClient = ChatClient.create(ollamaChatModel);
